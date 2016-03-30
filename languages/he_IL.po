@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-30 09:35+0300\n"
+"PO-Revision-Date: 2016-03-30 09:35+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-KeywordsList: _;gettext;dgettext:2;dcgettext:2;ngettext:1,2;"
+"dngettext:2,3;dcngettext:2,3;__;___:1;___:1,2c;__ngettext:1,2;"
+"__ngettext_noop:1,2;_c;_e;_ex:1,2c;_n;_n:1,2;_n_noop;_n_noop:1,2;_nc:1,2;"
+"_nx;_nx:1,2,4c;_nx:4c,1,2;_nx_noop;_nx_noop:1,2,3c;_nx_noop:4c,1,2;_refresh;"
+"_x;_x:1,2c;append;esc_attr_;esc_attr__;esc_attr_e;esc_attr_x;"
+"esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x;esc_html_x:1,2c;n___:1,2;"
+"n___:1,2,4c;prepend;setLabel;setLegend;setMessage;setValue;T_pgettext:1c,2;"
+"translate\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: class.ifnav-walker-nav-menu-edit.php:95
+#, php-format
+msgid "%s (Invalid)"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:99
+#, php-format
+msgid "%s (Pending)"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:112
+msgid "sub item"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:127
+msgid "Move up"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:140
+msgid "Move down"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:144
+#: class.ifnav-walker-nav-menu-edit.php:153
+msgid "Edit Menu Item"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:162
+msgid "URL"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:171
+msgid "Navigation Label"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:179
+msgid "Title Attribute"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:193
+msgid "Open link in a new tab"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:198
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:207
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:215
+msgid "Description"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:223
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:230
+msgid "Item Visibility:"
+msgstr "נראות:"
+
+#: class.ifnav-walker-nav-menu-edit.php:238
+msgid "Everyone"
+msgstr "לכולם"
+
+#: class.ifnav-walker-nav-menu-edit.php:246
+msgid "Authenticated Users"
+msgstr "למשתמשים מחוברים"
+
+#: class.ifnav-walker-nav-menu-edit.php:254
+msgid "Guests"
+msgstr "לאורחים"
+
+#: class.ifnav-walker-nav-menu-edit.php:261
+msgid "Move"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:262
+msgid "Up one"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:263
+msgid "Down one"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:266
+msgid "To the top"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:274
+#, php-format
+msgid "Original: %s"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:289
+msgid "Remove"
+msgstr ""
+
+#: class.ifnav-walker-nav-menu-edit.php:297
+msgid "Cancel"
+msgstr ""
