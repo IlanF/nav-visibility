@@ -83,10 +83,10 @@
 		 * Register WordPress hooks
 		 */
 		protected function register_hooks() {
-			add_filter( 'wp_setup_nav_menu_item', array( $this, 'nav_menu_fields' ), 0 );
+			add_filter( 'wp_setup_nav_menu_item',  array( $this, 'nav_menu_fields' ), 0 );
 			add_action( 'wp_update_nav_menu_item', array( $this, 'nav_menu_fields_update' ), 0, 3 );
 			add_filter( 'wp_edit_nav_menu_walker', array( $this, 'nav_menu_fields_edit_walker' ), 0, 2 );
-			add_filter( 'wp_get_nav_menu_items', array( $this, 'nav_menu_wp_get_nav_menu_items' ), 0, 2 );
+			add_filter( 'wp_get_nav_menu_items',   array( $this, 'nav_menu_wp_get_nav_menu_items' ), 0, 2 );
 		}
 
 		/**
