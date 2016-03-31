@@ -64,6 +64,7 @@
 		 * Load plugin dependencies
 		 */
 		protected function load_dependencies() {
+			require_once ABSPATH . 'wp-admin/includes/nav-menu.php';
 			require_once $this->plugin_dir . 'class.ifnav-walker-nav-menu-edit.php';
 		}
 
@@ -83,10 +84,11 @@
 		 * Register WordPress hooks
 		 */
 		protected function register_hooks() {
-			add_filter( 'wp_setup_nav_menu_item',  array( $this, 'nav_menu_fields' ), 0 );
-			add_action( 'wp_update_nav_menu_item', array( $this, 'nav_menu_fields_update' ), 0, 3 );
-			add_filter( 'wp_edit_nav_menu_walker', array( $this, 'nav_menu_fields_edit_walker' ), 0, 2 );
-			add_filter( 'wp_get_nav_menu_items',   array( $this, 'nav_menu_wp_get_nav_menu_items' ), 0, 2 );
+			add_filter( 'wp_setup_nav_menu_item',    array( $this, 'nav_menu_fields' ), 0 );
+			add_action( 'wp_update_nav_menu_item',   array( $this, 'nav_menu_fields_update' ), 0, 3 );
+			add_filter( 'wp_edit_nav_menu_walker',   array( $this, 'nav_menu_fields_edit_walker' ), 0, 2 );
+			add_filter( 'wp_get_nav_menu_items',     array( $this, 'nav_menu_wp_get_nav_menu_items' ), 0, 2 );
+			add_filter( 'ifnv_menu_edit_add_fields', array( $this, 'nav_menu_edit_add_fields' ), 0, 6 );
 		}
 
 		/**
@@ -155,6 +157,42 @@
 				} );
 
 			return $items;
+		}
+
+		public function nav_menu_edit_add_fields( $new_fields, $item_output, $item, $depth, $args, $id ) {
+			ob_start();
+			$item_id = esc_attr( $item->ID );
+			?>
+<p class="field-visibility description description-wide">
+	<label><?php _e( 'Item Visibility', 'ifnav-visibility' ); ?>:</label>
+	<label for="edit-menu-item-visibility-<?php echo $item_id; ?>-all">
+		<input type="radio" id="edit-menu-item-visibility-<?php echo $item_id; ?>-all" value="all"
+		       name="menu-item-visibility[<?php echo $item_id; ?>]"<?php if ( $item->visibility ) {
+			checked( $item->visibility, 'all' );
+		} else {
+			echo 'checked';
+		} ?> />
+		<?php _e( 'Everyone', 'ifnav-visibility' ); ?>
+	</label>
+	<label for="edit-menu-item-visibility-<?php echo $item_id; ?>-authenticated">
+		<input type="radio" id="edit-menu-item-visibility-<?php echo $item_id; ?>-authenticated"
+		       value="authenticated" name="menu-item-visibility[<?php echo $item_id; ?>]"<?php checked(
+			$item->visibility,
+			'authenticated'
+		); ?> />
+		<?php _e( 'Authenticated Users', 'ifnav-visibility' ); ?>
+	</label>
+	<label for="edit-menu-item-visibility-<?php echo $item_id; ?>-guest">
+		<input type="radio" id="edit-menu-item-visibility-<?php echo $item_id; ?>-guest" value="guest"
+		       name="menu-item-visibility[<?php echo $item_id; ?>]"<?php checked(
+			$item->visibility,
+			'guest'
+		); ?> />
+		<?php _e( 'Guests', 'ifnav-visibility' ); ?>
+	</label>
+</p>
+			<?php
+			return ob_get_clean();
 		}
 
 		/**
